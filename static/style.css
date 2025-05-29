@@ -1,0 +1,520 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    background-color: #000000;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 100vw;
+    margin: 0 auto;
+    border: solid 2px #000;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Botão de Contato */
+.btn-contato button {
+    padding: 20px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #cd7f32;
+    border: none;
+    border-radius: 40px;
+    color: #eedece;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* Títulos */
+h2.titulo {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #cd7f32;
+}
+
+/* Hover padrão para botões */
+button:hover,
+form .btn-enviar input[type="submit"]:hover {
+    box-shadow: 0px 0px 10px 0px #c5894d;
+    transform: scale(1.05);
+}
+
+/* Header */
+header {
+    padding: 10px 8%;
+}
+
+img {
+    width: 23vh;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #828282;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+
+header a:hover {
+    color: #cd7f32;
+    transform: scale(1.1);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 50px;
+}
+
+/* Seção Topo */
+section.topo {
+    padding: 20px 2%;
+}
+
+section.topo .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo h1 {
+    color: white;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.topo .txt-topo-site h1 span {
+    color: #cd7f32;
+    font-size: 38px;
+}
+
+.topo .txt-topo-site p {
+    color: white;
+    margin: 30px 0;
+    font-size: 18px;
+}
+
+.topo .img-topo-site img {
+    position: relative;
+    width: 90vh;
+    animation: img-flutuante 2s ease-in-out infinite alternate;
+}
+
+@keyframes img-flutuante {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+/* Seção Projetos */
+section.projetos {
+    padding: 40px 4%;
+    display: flex;
+}
+
+section.projetos .flex {
+    gap: 40px;
+}
+
+/* Estilização dos cards de projeto */
+.projetos .projetos-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 40px;
+    transition: 0.2s;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.projetos .projetos-box a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projetos .projetos-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.projetos .projetos-box i {
+    font-size: 40px;
+    color: #cd7f32;
+}
+
+.projetos .projetos-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* Seção Sobre */
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .img-sobre img {
+    width: 50vh;
+    border-radius: 100px;
+    padding: 50px 5%;
+}
+
+.sobre .txt-sobre {
+    color: white;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #cd7f32;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 30px 0;
+    text-align: justify;
+    font-size: 18px;
+    width: 55vw;
+}
+
+.btn-social button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #cd7f32;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 8px;
+    transition: 0.2s ease-in-out;
+}
+
+/* Portfólio */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: center;
+    transition: background-position 3s ease-in-out;
+    cursor: pointer;
+    border-radius: 30px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 10% 0%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 16, 16, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #cd7f32;
+    font-weight: 600;
+}
+
+/* Contato */
+section.contato {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #52505059;
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 10px;
+    color: #cd7f32;
+    font-size: 15px;
+}
+
+form textarea {
+    resize: none;
+    height: 120px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input[type="submit"] {
+    background-color: #cd7f32;
+    color: #eedece;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 15px 0;
+    border-radius: 40px;
+    transition: 0.2s ease-in-out;
+}
+
+/* Footer */
+footer {
+    padding: 30px 4%;
+    width: 100%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .line-footer {
+    padding: 10px 0;
+}
+
+.borda {
+    border-bottom: 2px solid #cd7f32;
+}
+
+footer .line-footer p i {
+    color: #cd7f32;
+    font-size: 18px;
+}
+
+footer .line-footer p a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Responsivo para tablets */
+@media screen and (max-width: 1024px) {
+
+    .topo .flex,
+    section.sobre .flex,
+    section.portfolio .flex,
+    section.projetos .flex,
+    footer .flex {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .topo .txt-topo-site h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .topo .img-topo-site img,
+    .sobre .img-sobre img {
+        width: 70vw;
+    }
+
+    .sobre .txt-sobre p {
+        width: 90vw;
+    }
+
+    .img-port {
+        width: 80vw;
+        height: 400px;
+    }
+
+    header nav ul li {
+        padding: 0 20px;
+    }
+
+    .projetos .projetos-box {
+        width: 80%;
+    }
+}
+
+/* Responsivo para celulares */
+@media screen and (max-width: 430px) {
+
+    /* Header */
+    header {
+        padding: 15px 4%;
+    }
+
+    header .interface {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 15px;
+    }
+
+    header nav ul li {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    header a {
+        font-size: 16px;
+    }
+
+    /* Topo */
+    section.topo .flex {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .topo h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .topo .txt-topo-site p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .topo .img-topo-site img {
+        width: 90vw;
+        height: auto;
+    }
+
+    /* Sobre */
+    section.sobre .flex {
+        padding: 40px 4%;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .sobre .txt-sobre p {
+        font-size: 15px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .sobre .img-sobre img {
+        width: 70vw;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    /* Projetos */
+    section.projetos .flex {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .projetos .projetos-box {
+        width: 100%;
+        padding: 25px;
+    }
+
+    /* Portfolio */
+    section.portfolio .flex {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .img-port {
+        width: 95%;
+        height: 250px;
+    }
+
+    /* Contato */
+    form {
+        width: 95%;
+        padding: 0;
+    }
+
+    form input,
+    form textarea {
+        font-size: 14px;
+        padding: 15px 12px;
+    }
+
+    form .btn-enviar input[type="submit"] {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    /* Footer */
+    footer .flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

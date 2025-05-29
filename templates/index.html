@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isabella Dev</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="{{ url_for('static', filename='images/bronzefloo.png') }}" alt="Logo de Isabella Dev" />
+                </a>
+            </div>
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#especialidades">Minhas Especialidades</a></li>
+                    <li><a href="#sobre">Sobre mim</a></li>
+                </ul>
+            </nav>
+            <div class="btn-contato">
+                <a href="#contato">
+                    <button>Contatos</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="topo">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>Olá, eu sou a <span>Isabella Martins :D</span></h1>
+                        <p>Sou desenvolvedora Fullstack e gosto de construir soluções completas com eficiência e criatividade.</p>
+                        <div class="btn-contato">
+                            <a href="docs/cv-isabella-martins.pdf" download>
+                                <button>Download CV</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img-topo-site">
+                        <img src="{{ url_for('static', filename='images/Isabella.png') }}" alt="Retrato de Isabella Ferreira Martins" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="especialidades" class="projetos">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <div class="flex">
+                    <a href="#" class="projetos-box" target="_blank">
+                        <i class="bi bi-window-sidebar"></i>
+                        <h3>Frontend</h3>
+                        <div class="tech-icons">
+                            <i class="bi bi-filetype-html"></i> HTML5<br />
+                            <i class="bi bi-filetype-css"></i> CSS3 / SCSS<br />
+                            <i class="bi bi-filetype-jsx"></i> React / JavaScript<br />
+                            <i class="bi bi-phone"></i> Layout Responsivo<br />
+                            <i class="bi bi-brush"></i> UI/UX
+                        </div>
+                    </a>
+                    <a href="#" class="projetos-box" target="_blank">
+                        <i class="bi bi-server"></i>
+                        <h3>Backend</h3>
+                        <div class="tech-icons">
+                            <i class="bi bi-filetype-py"></i> Python<br />
+                            <i class="bi bi-terminal"></i> Flask<br />
+                            <i class="bi bi-database"></i> SQLite3 / SQL<br />
+                            <i class="bi bi-lock"></i> Autenticação<br />
+                            <i class="bi bi-diagram-3"></i> APIs RESTful
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="{{ url_for('static', filename='images/sobreIsa.jpeg') }}" alt="Foto de Isabella" />
+                    </div>
+                    <div class="txt-sobre">
+                        <h2>Muito prazer, <span> sou Isabella Martins.</span></h2>
+                        <p>
+                            Sou formada em Pedagogia pela UFRJ, mas foi na tecnologia que encontrei minha verdadeira paixão.
+                            Com o tempo, comecei a estudar front-end, me aprofundando até me tornar desenvolvedora Fullstack.
+                            Hoje, curso Sistemas de Informação pela Uninter e estou sempre buscando evoluir, aprender coisas novas e criar soluções que realmente façam a diferença.
+                        </p>
+                        <div class="btn-social">
+                            <a href="http://linkedin.com/in/isabellamartins65"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://www.instagram.com/isabellasfm/"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://github.com/bronzefloo"><button><i class="bi bi-github"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
+                <div class="flex">
+                    <a href="https://confeitaria-gamma.vercel.app/" target="_blank">
+                        <div
+                            class="img-port"
+                            style="background-image: url('{{ url_for('static', filename='images/confeitarai1.jpg') }}');"
+                        >
+                            <div class="overlay">Site de confeitaria</div>
+                        </div>
+                    </a>
+                    <a href="https://formulario-login-dahj.vercel.app/" target="_blank">
+                        <div
+                            class="img-port"
+                            style="background-image: url('{{ url_for('static', filename='images/forms1.jpg') }}');"
+                        >
+                            <div class="overlay">Formulários</div>
+                        </div>
+                    </a>
+                    <a href="https://desafiofinal-x6sb.vercel.app/" target="_blank">
+                        <div
+                            class="img-port"
+                            style="background-image: url('{{ url_for('static', filename='images/livros1.jpg') }}');"
+                        >
+                            <div class="overlay">Site de livros</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+            <div class="interface">
+                <h2 class="titulo">ENTRE EM <span>CONTATO.</span></h2>
+                <form action="https://formspree.io/f/xeokjjyj" method="POST">
+                    <input type="text" placeholder="Seu nome completo:" required />
+                    <input type="email" placeholder="Seu e-mail:" required />
+                    <input type="text" placeholder="Seu celular:" />
+                    <textarea placeholder="Sua mensagem:" required></textarea>
+                    <div class="btn-enviar">
+                        <input type="submit" value="ENVIAR" />
+                    </div>
+                </form>
+                <script src="{{ url_for('static', filename='script.js') }}"></script>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="{{ url_for('static', filename='images/bronzefloo.png') }}" alt="Logo Isabella" />
+                    </div>
+                    <div class="btn-social">
+                        <a href="http://linkedin.com/in/isabellamartins65"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://www.instagram.com/isabellasfm/"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://github.com/bronzefloo"><button><i class="bi bi-github"></i></button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-fill"></i><a href="mailto:isssabella124@gmail.com"> isssabella124@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
