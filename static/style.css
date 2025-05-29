@@ -355,72 +355,30 @@ footer .line-footer p a {
     margin-top: 10px;
 }
 
-/* Responsivo para tablets */
-@media screen and (max-width: 1024px) {
-
-    .topo .flex,
-    section.sobre .flex,
-    section.portfolio .flex,
-    section.projetos .flex,
-    footer .flex {
-        flex-direction: column;
-        gap: 40px;
-        align-items: center;
-        text-align: center;
-    }
-
-    .topo .txt-topo-site h1 {
-        font-size: 32px;
-        line-height: 40px;
-    }
-
-    .topo .img-topo-site img,
-    .sobre .img-sobre img {
-        width: 70vw;
-    }
-
-    .sobre .txt-sobre p {
-        width: 90vw;
-    }
-
-    .img-port {
-        width: 80vw;
-        height: 400px;
-    }
-
-    header nav ul li {
-        padding: 0 20px;
-    }
-
-    .projetos .projetos-box {
-        width: 80%;
-    }
-}
-
 /* Responsivo para celulares */
 @media screen and (max-width: 430px) {
 
     /* Header */
     header {
-        padding: 15px 4%;
+        padding: 20px 4%;
     }
 
     header .interface {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 10px;
+        gap: 12px;
     }
 
     header nav ul {
         flex-direction: column;
-        gap: 10px;
-        padding-top: 15px;
+        gap: 8px;
+        padding-top: 10px;
     }
 
     header nav ul li {
-        padding: 10px 10px;
-        font-size: 14px;
+        padding: 8px 0;
+        text-align: center;
+        width: 100%;
     }
 
     header a {
@@ -430,96 +388,135 @@ footer .line-footer p a {
     /* Topo */
     section.topo .flex {
         flex-direction: column-reverse;
-        gap: 30px;
+        text-align: center;
+        gap: 20px;
     }
 
     .topo h1 {
-        font-size: 28px;
-        text-align: center;
+        font-size: 30px;
+        line-height: 32px;
+        letter-spacing: 2px;
+
     }
 
     .topo .txt-topo-site p {
-        font-size: 16px;
-        text-align: center;
+        font-size: 15px;
+        width: 100%;
+        padding: 0 8px;
     }
 
     .topo .img-topo-site img {
-        width: 90vw;
+        width: 100%;
         height: auto;
+        max-width: 340px;
+        border-radius: 20px;
+        margin-bottom: 20px;
     }
 
     /* Sobre */
     section.sobre .flex {
-        padding: 40px 4%;
-        gap: 40px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
         flex-direction: column;
+        text-align: center;
+        gap: 30px;
     }
 
     .sobre .txt-sobre h2 {
-        font-size: 28px;
-        line-height: 34px;
+        font-size: 26px;
+        line-height: 32px;
     }
 
     .sobre .txt-sobre p {
         font-size: 15px;
-        width: 90%;
-        margin: 0 auto;
+        width: 100%;
+        padding: 0 10px;
     }
 
     .sobre .img-sobre img {
-        width: 70vw;
-        padding: 15px;
+        width: 100%;
+        max-width: 300px;
         border-radius: 20px;
     }
 
     /* Projetos */
     section.projetos .flex {
         flex-direction: column;
-        gap: 25px;
+        gap: 24px;
         align-items: center;
     }
 
     .projetos .projetos-box {
-        width: 100%;
-        padding: 25px;
+        width: 90%;
+        padding: 20px;
     }
 
-    /* Portfolio */
+    /* Portfólio */
     section.portfolio .flex {
         flex-direction: column;
-        gap: 25px;
         align-items: center;
+        gap: 24px;
+        margin-top: 40px;
     }
 
     .img-port {
-        width: 95%;
-        height: 250px;
+        width: 90%;
+        max-width: 340px;
+        height: 240px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .overlay {
+        font-size: 20px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* Redes Sociais */
+    .social {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .social a {
+        color: black !important;
+        text-decoration: none !important;
+        font-size: 22px;
     }
 
     /* Contato */
     form {
-        width: 95%;
-        padding: 0;
+        width: 100%;
+        padding: 0 5%;
     }
 
     form input,
     form textarea {
         font-size: 14px;
-        padding: 15px 12px;
+        padding: 14px;
     }
 
     form .btn-enviar input[type="submit"] {
         font-size: 16px;
-        padding: 12px 0;
+        padding: 14px;
+        width: 100%;
     }
 
     /* Footer */
     footer .flex {
         flex-direction: column;
-        align-items: center;
         text-align: center;
+        gap: 14px;
+    }
+
+    footer .line-footer p {
+        font-size: 14px;
+    }
+
+    footer .line-footer p a {
+        font-size: 14px;
     }
 }
