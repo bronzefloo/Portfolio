@@ -4,23 +4,24 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    mensagem = None
 
-@app.route('/contato', methods=['POST'])
-def contato():
-    nome = request.form.get('nome')
-    email = request.form.get('email')
-    celular = request.form.get('celular')
-    mensagem = request.form.get('mensagem')
+    if request.method == 'POST':
+        nome = request.form.get('nome')
+        email = request.form.get('email')
+        celular = request.form.get('celular')
+        msg = request.form.get('mensagem')
 
-    try:
-        with open('mensagens.txt', 'a', encoding='utf-8') as f:
-            f.write(f'Nome: {nome}\nEmail: {email}\nCelular: {celular}\nMensagem: {mensagem}\n---\n')
-        return "Enviado com sucesso", 200
-    except Exception as e:
-        return f"Erro: {str(e)}", 500
+        try:
+            with open('mensagens.txt', 'a', encoding='utf-8') as f:
+                f.write(f'Nome: {nome}\nEmail: {email}\nCelular: {celular}\nMensagem: {msg}\n---\n')
+            mensagem = "Obrigada, entraremos em contato!"
+        except Exception as e:
+            mensagem = f"Erro ao enviar: {str(e)}"
+
+    return render_template('index.html', mensagem=mensagem)
 
 if __name__ == '__main__':
     app.run(debug=True)

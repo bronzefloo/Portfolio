@@ -109,17 +109,22 @@ section.topo .flex {
 .topo .txt-topo-site h1 span {
     color: #cd7f32;
     font-size: 38px;
+;
 }
 
 .topo .txt-topo-site p {
     color: white;
-    margin: 30px 0;
+    margin: 20px 0;
+    line-height: 30px;
     font-size: 18px;
+    width: 60vw;
 }
 
 .topo .img-topo-site img {
     position: relative;
-    width: 90vh;
+    width: 45vh;
+    height: 80vh;
+    border-radius: 100px;
     animation: img-flutuante 2s ease-in-out infinite alternate;
 }
 

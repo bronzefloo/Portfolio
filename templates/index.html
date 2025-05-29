@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="img-topo-site">
-                        <img src="{{ url_for('static', filename='images/Isabella.png') }}" alt="Retrato de Isabella Ferreira Martins" />
+                        <img src="{{ url_for('static', filename='images/isabella.jpeg') }}" alt="Retrato de Isabella Ferreira Martins" />
                     </div>
                 </div>
             </div>
@@ -148,15 +148,23 @@
         <section id="contato" class="contato">
             <div class="interface">
                 <h2 class="titulo">ENTRE EM <span>CONTATO.</span></h2>
-                <form action="https://dev-isabellamartins.onrender.com/contato" method="POST">
-                    <input type="text" placeholder="Seu nome completo:" required />
-                    <input type="email" placeholder="Seu e-mail:" required />
-                    <input type="text" placeholder="Seu celular:" />
-                    <textarea placeholder="Sua mensagem:" required></textarea>
+
+                {% if mensagem %}
+                <div style="padding: 10px; background-color: #4caf50; color: white; margin-bottom: 20px; border-radius: 5px;">
+                    {{ mensagem }}
+                </div>
+                {% endif %}
+
+                <form method="POST" action="/">
+                    <input type="text" name="nome" placeholder="Seu nome completo:" required />
+                    <input type="email" name="email" placeholder="Seu e-mail:" required />
+                    <input type="text" name="celular" placeholder="Seu celular:" />
+                    <textarea name="mensagem" placeholder="Sua mensagem:" required></textarea>
                     <div class="btn-enviar">
                         <input type="submit" value="ENVIAR" />
                     </div>
                 </form>
+
                 <script src="{{ url_for('static', filename='script.js') }}"></script>
             </div>
         </section>
