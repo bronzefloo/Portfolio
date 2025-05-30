@@ -9,7 +9,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
@@ -46,7 +47,8 @@
                 <div class="flex">
                     <div class="txt-topo-site">
                         <h1>Olá, eu sou a <span>Isabella Martins :D</span></h1>
-                        <p>Sou desenvolvedora Fullstack e gosto de construir soluções completas com eficiência e criatividade.</p>
+                        <p>Sou desenvolvedora Fullstack e gosto de construir soluções completas com eficiência e
+                            criatividade.</p>
                         <div class="btn-contato">
                             <a href="docs/cv-isabella-martins.pdf" download>
                                 <button>Download CV</button>
@@ -54,7 +56,8 @@
                         </div>
                     </div>
                     <div class="img-topo-site">
-                        <img src="{{ url_for('static', filename='images/isabella.jpeg') }}" alt="Retrato de Isabella Ferreira Martins" />
+                        <img src="{{ url_for('static', filename='images/isabella.jpeg') }}"
+                            alt="Retrato de Isabella Ferreira Martins" />
                     </div>
                 </div>
             </div>
@@ -99,15 +102,26 @@
                     <div class="txt-sobre">
                         <h2>Muito prazer, <span> sou Isabella Martins.</span></h2>
                         <p>
-                            Sou formada em Pedagogia pela UFRJ, mas foi na tecnologia que encontrei minha verdadeira paixão.
-                            Com o tempo, comecei a estudar front-end, me aprofundando até me tornar desenvolvedora Fullstack.
-                            Hoje, curso Sistemas de Informação pela Uninter e estou sempre buscando evoluir, aprender coisas novas e criar soluções que realmente façam a diferença.
+                            Sou formada em Pedagogia pela UFRJ, mas foi na tecnologia que encontrei minha verdadeira
+                            paixão.
+                            Com o tempo, comecei a estudar front-end, me aprofundando até me tornar desenvolvedora
+                            Fullstack.
+                            Hoje, curso Sistemas de Informação pela Uninter e estou sempre buscando evoluir, aprender
+                            coisas novas e criar soluções que realmente façam a diferença.
                         </p>
                         <div class="btn-social">
-                            <a href="http://linkedin.com/in/isabellamartins65"><button><i class="bi bi-linkedin"></i></button></a>
-                            <a href="https://www.instagram.com/isabellasfm/"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="https://github.com/bronzefloo"><button><i class="bi bi-github"></i></button></a>
+                            <a href="http://linkedin.com/in/isabellamartins65" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/isabellasfm/" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://github.com/bronzefloo" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i>
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -118,17 +132,20 @@
                 <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
                     <a href="https://confeitaria-gamma.vercel.app/" target="_blank">
-                        <div class="img-port"style="background-image: url('{{ url_for('static', filename='images/confeitarai1.jpg') }}');">
+                        <div class="img-port"
+                            style="background-image: url('{{ url_for('static', filename='images/confeitarai1.jpg') }}');">
                             <div class="overlay">Site de confeitaria</div>
                         </div>
                     </a>
                     <a href="https://formulario-login-dahj.vercel.app/" target="_blank">
-                        <div class="img-port"style="background-image: url('{{ url_for('static', filename='images/forms1.jpg') }}');">
+                        <div class="img-port"
+                            style="background-image: url('{{ url_for('static', filename='images/forms1.jpg') }}');">
                             <div class="overlay">Formulários</div>
                         </div>
                     </a>
                     <a href="https://desafiofinal-x6sb.vercel.app/" target="_blank">
-                        <div class="img-port"style="background-image: url('{{ url_for('static', filename='images/livros1.jpg') }}');">
+                        <div class="img-port"
+                            style="background-image: url('{{ url_for('static', filename='images/livros1.jpg') }}');">
                             <div class="overlay">Site de livros</div>
                         </div>
                     </a>
@@ -141,7 +158,8 @@
                 <h2 class="titulo">ENTRE EM <span>CONTATO.</span></h2>
 
                 {% if mensagem %}
-                <div style="padding: 10px; background-color: #4caf50; color: white; margin-bottom: 20px; border-radius: 5px;">
+                <div
+                    style="padding: 10px; background-color: #4caf50; color: white; margin-bottom: 20px; border-radius: 5px;">
                     {{ mensagem }}
                 </div>
                 {% endif %}
@@ -169,14 +187,17 @@
                         <img src="{{ url_for('static', filename='images/bronzefloo.png') }}" alt="Logo Isabella" />
                     </div>
                     <div class="btn-social">
-                        <a href="http://linkedin.com/in/isabellamartins65"><button><i class="bi bi-linkedin"></i></button></a>
-                        <a href="https://www.instagram.com/isabellasfm/"><button><i class="bi bi-instagram"></i></button></a>
-                        <a href="https://github.com/bronzefloo"><button><i class="bi bi-github"></i></button></a>
+                        <a href="http://linkedin.com/in/isabellamartins65"><i
+                                    class="bi bi-linkedin"></i></a>
+                        <a href="https://www.instagram.com/isabellasfm/"><i
+                                    class="bi bi-instagram"></i></a>
+                        <a href="https://github.com/bronzefloo"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
             </div>
             <div class="line-footer borda">
-                <p><i class="bi bi-envelope-fill"></i><a href="mailto:isssabella124@gmail.com"> isssabella124@gmail.com</a></p>
+                <p><i class="bi bi-envelope-fill"></i><a href="mailto:isssabella124@gmail.com">
+                        isssabella124@gmail.com</a></p>
             </div>
         </div>
     </footer>

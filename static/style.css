@@ -224,17 +224,27 @@ section.sobre .flex {
     width: 55vw;
 }
 
-.btn-social button {
+.btn-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: none;
     background-color: #cd7f32;
+    color: #eedece;
     font-size: 24px;
-    cursor: pointer;
+    text-decoration: none; /* tira o sublinhado */
     margin: 0 8px;
     transition: 0.2s ease-in-out;
+    cursor: pointer;
 }
+
+.btn-social a:hover {
+    box-shadow: 0 0 10px #c5894d;
+    transform: scale(1.1);
+}
+
 
 /* Portfólio */
 section.portfolio {
@@ -327,6 +337,15 @@ footer {
     padding: 30px 4%;
     width: 100%;
     box-shadow: 0 0 40px 10px #ffffff1d;
+}
+footer .btn-social a {
+    background-color: #cd7f32;
+    color: #eedece;
+}
+
+footer .btn-social a:hover {
+    box-shadow: 0 0 10px #c5894d;
+    transform: scale(1.1);
 }
 
 footer .flex {
@@ -453,24 +472,7 @@ footer .line-footer p a {
     section.portfolio .flex {
         flex-direction: column;
         align-items: center;
-        gap: 24px;
-        margin-top: 40px;
-    }
-
-    .img-port {
-        width: 90%;
-        max-width: 340px;
-        height: 240px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 20px;
-        position: relative;
-    }
-
-    .overlay {
-        font-size: 20px;
-        text-align: center;
-        padding: 0 10px;
+        gap: 30px;
     }
 
     /* Redes Sociais */
@@ -482,8 +484,8 @@ footer .line-footer p a {
     }
 
     .social a {
-        color: black !important;
-        text-decoration: none !important;
+        width: 40px;
+        text-decoration: none;
         font-size: 22px;
     }
 
