@@ -1,4 +1,4 @@
-/* Reset CSS */
+/* -------------------------------- Reset Geral -------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -11,18 +11,34 @@ body {
     height: 100vh;
 }
 
+img {
+    width: 23vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* -------------------------------- Utilitários -------------------------------- */
+.flex {
+    display: flex;
+}
+
 .interface {
     max-width: 100vw;
     margin: 0 auto;
     border: solid 2px #000;
 }
 
-.flex {
-    display: flex;
-}
-
-/* Botão de Contato */
-.btn-contato button {
+/* -------------------------------- Botões -------------------------------- */
+button,
+form .btn-enviar input[type="submit"] {
     padding: 20px 30px;
     font-size: 15px;
     font-weight: 600;
@@ -34,7 +50,13 @@ body {
     transition: 0.2s ease-in-out;
 }
 
-/* Títulos */
+button:hover,
+form .btn-enviar input[type="submit"]:hover {
+    box-shadow: 0px 0px 10px 0px #c5894d;
+    transform: scale(1.05);
+}
+
+/* -------------------------------- Títulos -------------------------------- */
 h2.titulo {
     color: white;
     font-size: 38px;
@@ -45,20 +67,9 @@ h2.titulo span {
     color: #cd7f32;
 }
 
-/* Hover padrão para botões */
-button:hover,
-form .btn-enviar input[type="submit"]:hover {
-    box-shadow: 0px 0px 10px 0px #c5894d;
-    transform: scale(1.05);
-}
-
-/* Header */
+/* -------------------------------- Header -------------------------------- */
 header {
     padding: 10px 8%;
-}
-
-img {
-    width: 23vh;
 }
 
 header>.interface {
@@ -67,12 +78,18 @@ header>.interface {
     justify-content: space-between;
 }
 
+header nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+header nav ul li {
+    padding: 0 10px;
+}
+
 header a {
     color: #828282;
-    text-decoration: none;
-    display: inline-block;
     font-size: 18px;
-    transition: 0.3s ease-in-out;
 }
 
 header a:hover {
@@ -80,16 +97,7 @@ header a:hover {
     transform: scale(1.1);
 }
 
-header nav ul {
-    list-style-type: none;
-}
-
-header nav ul li {
-    display: inline-block;
-    padding: 0 50px;
-}
-
-/* Seção Topo */
+/* -------------------------------- Seção Topo -------------------------------- */
 section.topo {
     padding: 20px 2%;
 }
@@ -109,7 +117,6 @@ section.topo .flex {
 .topo .txt-topo-site h1 span {
     color: #cd7f32;
     font-size: 38px;
-;
 }
 
 .topo .txt-topo-site p {
@@ -129,46 +136,35 @@ section.topo .flex {
 }
 
 @keyframes img-flutuante {
-    0% {
-        top: 0;
-    }
-
-    100% {
-        transform: translateY(20px);
-    }
+    0% { top: 0; }
+    100% { transform: translateY(20px); }
 }
 
-/* Seção Projetos */
+/* -------------------------------- Seção Projetos -------------------------------- */
 section.projetos {
     padding: 40px 4%;
-    display: flex;
+
 }
 
 section.projetos .flex {
     gap: 40px;
+
+    justify-content: center;
 }
 
-/* Estilização dos cards de projeto */
 .projetos .projetos-box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    width: 300px;
     align-items: center;
+    justify-content: center;
     color: white;
     padding: 40px;
     border-radius: 20px;
     margin-top: 40px;
+    text-decoration: none;
     transition: 0.2s;
-    text-decoration: none;
     background: rgba(255, 255, 255, 0.05);
-}
-
-.projetos .projetos-box a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .projetos .projetos-box:hover {
@@ -186,7 +182,7 @@ section.projetos .flex {
     margin: 15px 0;
 }
 
-/* Seção Sobre */
+/* -------------------------------- Seção Sobre -------------------------------- */
 section.sobre {
     padding: 80px 4%;
 }
@@ -224,6 +220,7 @@ section.sobre .flex {
     width: 55vw;
 }
 
+/* -------------------------------- Botões Sociais -------------------------------- */
 .btn-social a {
     display: inline-flex;
     justify-content: center;
@@ -234,10 +231,9 @@ section.sobre .flex {
     background-color: #cd7f32;
     color: #eedece;
     font-size: 24px;
-    text-decoration: none; /* tira o sublinhado */
     margin: 0 8px;
-    transition: 0.2s ease-in-out;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 .btn-social a:hover {
@@ -245,27 +241,29 @@ section.sobre .flex {
     transform: scale(1.1);
 }
 
-
-/* Portfólio */
+/* -------------------------------- Seção Portfólio -------------------------------- */
 section.portfolio {
-    padding: 80px 4%;
+    padding: 20px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
 }
 
 section.portfolio .flex {
     justify-content: space-around;
-    margin-top: 60px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 2px;
+
 }
 
 .img-port {
-    width: 360px;
-    height: 460px;
+    width: 280px;
+    height: 280px;
     background-size: cover;
     background-position: center;
     transition: background-position 3s ease-in-out;
-    cursor: pointer;
     border-radius: 30px;
     position: relative;
+    cursor: pointer;
 }
 
 .img-port:hover {
@@ -275,6 +273,7 @@ section.portfolio .flex {
 .overlay {
     position: absolute;
     top: 0;
+    right: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -286,8 +285,35 @@ section.portfolio .flex {
     color: #cd7f32;
     font-weight: 600;
 }
+.overlay p{
+    margin: 0;
+    text-align: center;
+    padding: 0 10px;
+}
 
-/* Contato */
+.portfolio-links {
+    margin-top: 2px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-links a {
+    background-color: #ffffffcc;
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.portfolio-links a:hover {
+    background-color: #cd7f32;
+}
+
+/* -------------------------------- Seção Contato -------------------------------- */
 section.contato {
     padding: 80px 4%;
 }
@@ -322,30 +348,11 @@ form .btn-enviar {
     text-align: center;
 }
 
-form .btn-enviar input[type="submit"] {
-    background-color: #cd7f32;
-    color: #eedece;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 15px 0;
-    border-radius: 40px;
-    transition: 0.2s ease-in-out;
-}
-
-/* Footer */
+/* -------------------------------- Footer -------------------------------- */
 footer {
     padding: 30px 4%;
     width: 100%;
     box-shadow: 0 0 40px 10px #ffffff1d;
-}
-footer .btn-social a {
-    background-color: #cd7f32;
-    color: #eedece;
-}
-
-footer .btn-social a:hover {
-    box-shadow: 0 0 10px #c5894d;
-    transform: scale(1.1);
 }
 
 footer .flex {
@@ -358,8 +365,14 @@ footer .line-footer {
     padding: 10px 0;
 }
 
-.borda {
-    border-bottom: 2px solid #cd7f32;
+footer .btn-social a {
+    background-color: #cd7f32;
+    color: #eedece;
+}
+
+footer .btn-social a:hover {
+    box-shadow: 0 0 10px #c5894d;
+    transform: scale(1.1);
 }
 
 footer .line-footer p i {
@@ -369,15 +382,11 @@ footer .line-footer p i {
 
 footer .line-footer p a {
     color: #ffffff;
-    text-decoration: none;
     font-size: 18px;
-    margin-top: 10px;
 }
 
-/* Responsivo para celulares */
+/* -------------------------------- Responsivo -------------------------------- */
 @media screen and (max-width: 430px) {
-
-    /* Header */
     header {
         padding: 20px 4%;
     }
@@ -404,7 +413,6 @@ footer .line-footer p a {
         font-size: 16px;
     }
 
-    /* Topo */
     section.topo .flex {
         flex-direction: column-reverse;
         text-align: center;
@@ -415,7 +423,6 @@ footer .line-footer p a {
         font-size: 30px;
         line-height: 32px;
         letter-spacing: 2px;
-
     }
 
     .topo .txt-topo-site p {
@@ -432,7 +439,6 @@ footer .line-footer p a {
         margin-bottom: 20px;
     }
 
-    /* Sobre */
     section.sobre .flex {
         flex-direction: column;
         text-align: center;
@@ -455,12 +461,12 @@ footer .line-footer p a {
         max-width: 300px;
         border-radius: 20px;
     }
-
-    /* Projetos */
+/* Especialidades */
     section.projetos .flex {
         flex-direction: column;
         gap: 24px;
         align-items: center;
+
     }
 
     .projetos .projetos-box {
@@ -468,14 +474,12 @@ footer .line-footer p a {
         padding: 20px;
     }
 
-    /* Portfólio */
     section.portfolio .flex {
         flex-direction: column;
         align-items: center;
         gap: 30px;
     }
 
-    /* Redes Sociais */
     .social {
         display: flex;
         justify-content: center;
@@ -485,11 +489,9 @@ footer .line-footer p a {
 
     .social a {
         width: 40px;
-        text-decoration: none;
         font-size: 22px;
     }
 
-    /* Contato */
     form {
         width: 100%;
         padding: 0 5%;
@@ -507,17 +509,13 @@ footer .line-footer p a {
         width: 100%;
     }
 
-    /* Footer */
     footer .flex {
         flex-direction: column;
         text-align: center;
         gap: 14px;
     }
 
-    footer .line-footer p {
-        font-size: 14px;
-    }
-
+    footer .line-footer p,
     footer .line-footer p a {
         font-size: 14px;
     }

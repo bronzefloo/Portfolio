@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="icon" href="bronzefloo.png" type="image/png">
+
 </head>
 
 <body>
@@ -127,31 +129,56 @@
             </div>
         </section>
 
-        <section class="portfolio">
+<section class="portfolio">
             <div class="interface">
                 <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
-                    <a href="https://confeitaria-gamma.vercel.app/" target="_blank">
-                        <div class="img-port"
-                            style="background-image: url('{{ url_for('static', filename='images/confeitarai1.jpg') }}');">
-                            <div class="overlay">Site de confeitaria</div>
+                    <div class="img-port"
+                        style="background-image: url('{{ url_for('static', filename='images/confeitarai1.jpg') }}');">
+                        <div class="overlay">
+                            <p>Site de confeitaria</p>
+                            <div class="portfolio-links">
+                                <a href="https://confeitaria-gamma.vercel.app/" target="_blank">Ver Site</a>
+                                <a href="https://github.com/bronzefloo/confeitaria" target="_blank">Ver Código</a>
+                            </div>
                         </div>
-                    </a>
-                    <a href="https://formulario-login-dahj.vercel.app/" target="_blank">
-                        <div class="img-port"
-                            style="background-image: url('{{ url_for('static', filename='images/forms1.jpg') }}');">
-                            <div class="overlay">Formulários</div>
+                    </div>
+
+                    <div class="img-port"
+                        style="background-image: url('{{ url_for('static', filename='images/forms1.jpg') }}');">
+                        <div class="overlay">
+                            <p>Formulários</p>
+                            <div class="portfolio-links">
+                                <a href="https://formulario-login-dahj.vercel.app/" target="_blank">Ver Site</a>
+                                <a href="https://github.com/bronzefloo/FormularioLogin/" target="_blank">Ver
+                                    Código</a>
+                            </div>
                         </div>
-                    </a>
-                    <a href="https://desafiofinal-x6sb.vercel.app/" target="_blank">
-                        <div class="img-port"
-                            style="background-image: url('{{ url_for('static', filename='images/livros1.jpg') }}');">
-                            <div class="overlay">Site de livros</div>
+                    </div>
+
+                    <div class="img-port"
+                        style="background-image: url('{{ url_for('static', filename='images/livros1.jpg') }}');">
+                        <div class="overlay">
+                            <p>Site de livros</p>
+                            <div class="portfolio-links">
+                                <a href="https://desafiofinal-x6sb.vercel.app/" target="_blank">Ver Site</a>
+                                <a href="https://github.com/bronzefloo/desafiofinal/tree/main" target="_blank">Ver
+                                    Código</a>
+                            </div>
                         </div>
-                    </a>
+                    </div>
+                    <div class="img-port"
+                        style="background-image: url('{{ url_for('static', filename='images/apilivros.png') }}');">
+                        <div class="overlay">
+                            <p>APIs RESTful</p>
+                            <div class="portfolio-links">
+                                <a href="https://github.com/bronzefloo/api_novo" target="_blank">Ver Código</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </section>
 
         <section id="contato" class="contato">
             <div class="interface">
@@ -174,7 +201,6 @@
                     </div>
                 </form>
 
-                <script src="{{ url_for('static', filename='script.js') }}"></script>
             </div>
         </section>
     </main>
@@ -201,6 +227,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>
